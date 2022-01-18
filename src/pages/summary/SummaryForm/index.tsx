@@ -1,7 +1,8 @@
 import { useState } from "react";
 
+import { Button, OverlayTrigger, Popover } from "react-bootstrap";
+
 import styled from "styled-components";
-import { Button } from "react-bootstrap";
 
 const SummaryForm = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -9,6 +10,12 @@ const SummaryForm = () => {
   const handleCheck = () => {
     setIsChecked((prev) => !prev);
   };
+
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Body>No ice cream will actually be delivered</Popover.Body>
+    </Popover>
+  );
 
   return (
     <StyledSummaryFormContainer>
@@ -19,7 +26,10 @@ const SummaryForm = () => {
           onChange={handleCheck}
         />
         <StyledLabel htmlFor="conditions">
-          I agree to <strong>Terms and Conditions</strong>
+          I agree to
+          <OverlayTrigger overlay={popover} placement="right">
+            <strong> Terms and Conditions</strong>
+          </OverlayTrigger>
         </StyledLabel>
       </StyledCheckList>
       <Button variant="light" disabled={!isChecked}>
