@@ -1,4 +1,5 @@
 import SummaryForm from "../SummaryForm";
+import Options from "src/pages/entry/Options";
 
 import styled from "styled-components";
 
@@ -24,6 +25,7 @@ const OrderSummary = () => {
       </StyledCheckListContainer>
       <StyledOrderSummarySubtitle>Total $10.50</StyledOrderSummarySubtitle>
       <SummaryForm />
+      <Options optionsType="scoops" />
     </StyledOrderSummaryContainer>
   );
 };
