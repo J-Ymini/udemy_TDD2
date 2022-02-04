@@ -26,6 +26,7 @@ const OrderSummary = () => {
       <StyledOrderSummarySubtitle>Total $10.50</StyledOrderSummarySubtitle>
       <SummaryForm />
       <Options optionsType="scoops" />
+      <Options optionsType="toppings" />
     </StyledOrderSummaryContainer>
   );
 };
@@ -56,15 +57,4 @@ const StyledCheckListContainer = styled.div`
 
 const StyledCheckList = styled.div`
   margin-bottom: 50px;
-`;
-
-const StyledLabel = styled.label`
-  strong {
-    color: blue;
-    font-weight: 700;
-  }
-`;
-
-const StyledCheckbox = styled.input`
-  margin-right: 10px;
 `;
