@@ -1,4 +1,4 @@
-import SummaryForm from "../../components/SummaryForm";
+import SummaryForm from "src/components/SummaryForm";
 import Options from "src/components/Options";
 
 import styled from "styled-components";

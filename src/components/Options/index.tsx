@@ -1,4 +1,4 @@
-import ScoopOption from "../ScoopOption";
+import ScoopOption from "src/components/ScoopOption";
 
 import { useAxios } from "src/hooks";
 
