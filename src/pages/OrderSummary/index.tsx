@@ -1,5 +1,5 @@
-import SummaryForm from "../SummaryForm";
-import Options from "src/pages/entry/Options";
+import SummaryForm from "../../components/SummaryForm";
+import Options from "src/components/Options";
 
 import styled from "styled-components";
 

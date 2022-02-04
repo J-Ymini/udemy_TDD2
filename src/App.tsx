@@ -1,6 +1,6 @@
 import React from "react";
 
-import OrderSummary from "./pages/summary/OrderSummary";
+import OrderSummary from "./pages/OrderSummary";
 
 function App() {
   return <OrderSummary />;
