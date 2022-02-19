@@ -2,6 +2,7 @@ import SummaryForm from "src/components/SummaryForm";
 import Options from "src/components/Options";
 
 import styled from "styled-components";
+import OrderEntry from "src/components/OrderEntry";
 
 const OrderSummary = () => {
   return (

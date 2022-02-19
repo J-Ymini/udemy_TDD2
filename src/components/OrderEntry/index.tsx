@@ -1,9 +1,14 @@
 import React from "react";
 
-import styled from "styled-components";
+import Options from "../Options";
 
 const OrderEntry = () => {
-  return <div></div>;
+  return (
+    <>
+      <Options optionsType="scoops" />
+      <Options optionsType="toppings" />
+    </>
+  );
 };
 
 export default OrderEntry;

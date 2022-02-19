@@ -3,6 +3,7 @@ import axios from "axios";
 
 const useAxios = (fetchUrl: string) => {
   const [items, setItems] = useState([]);
+  const [error, setError] = useState<boolean>(false);
 
   const getDataList = async (fetchUrl: string) => {
     try {
@@ -10,7 +11,7 @@ const useAxios = (fetchUrl: string) => {
       const data = response.data;
       return data;
     } catch (error) {
-      alert(error);
+      setError(true);
     }
   };
 
@@ -18,7 +19,7 @@ const useAxios = (fetchUrl: string) => {
     getDataList(fetchUrl).then((data) => setItems(data));
   }, []);
 
-  return { items };
+  return { items, error };
 };
 
 export default useAxios;

@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 import ScoopOption from "src/components/ScoopOption";
 import ToppingOption from "src/components/ToppingOption";
+import AlertBanner from "../common/AlertBanner";
 
 import { Row } from "react-bootstrap";
 
@@ -11,9 +14,13 @@ interface IOptionsProps {
 
 const Options = ({ optionsType }: IOptionsProps) => {
   // optionsType is 'scoops' or 'toppings'
-  const { items } = useAxios(`http://localhost:3030/${optionsType}`);
+  const { items, error } = useAxios(`http://localhost:3030/${optionsType}`);
 
   const ItemComponent = optionsType === "scoops" ? ScoopOption : ToppingOption;
+
+  if (error) {
+    return <AlertBanner />;
+  }
 
   return (
     <Row>
