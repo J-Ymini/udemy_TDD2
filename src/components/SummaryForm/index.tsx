@@ -50,6 +50,10 @@ const StyledCheckList = styled.div`
 `;
 
 const StyledLabel = styled.label`
+  &:hover {
+    cursor: pointer;
+  }
+
   strong {
     color: blue;
     font-weight: 700;
